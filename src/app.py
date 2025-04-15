@@ -109,10 +109,6 @@ def signup_for_activity(activity_name: str, email: str = None):
 
     """Sign up a student for an activity"""
 
-
-    # Get the specificy activity
-    activity = activities[activity_name]
-
     # Add student
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
